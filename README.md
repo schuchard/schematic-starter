@@ -16,7 +16,7 @@ example schematic that uses the Angular Component Schematic to generate a new co
 
 ## Getting started
 
-⚙ [Yarn](https://yarnpkg.com/en/docs/install#mac-stable) is required for the scripts. Make sure it's installed on your machine.
+⚙ [Yarn](https://yarnpkg.com/en/docs/install#mac-stable) is required for the scripts. Make sure it's installed on your machine. If you'd like to use NPM, update the package.json scripts from `yarn` to `npm run` and the link command from `yarn` to `npm`.
 
 ⬇ **Install** the dependencies for the schematic and the sandbox application
 
@@ -33,13 +33,15 @@ yarn link:schematic
 🏃 **Run** the schematic
 
 ```bash
+yarn dev
+# or
 yarn build:clean:launch
 ```
 
 To execute an example schematic, make sure you've ran the **Install** and **Link** steps above. Then run the following and inspect the changed files.
 
 ```bash
-git checkout component-license && yarn build:clean:launch
+git checkout component-license && yarn dev
 ```
 
 ## E2E testing
@@ -95,9 +97,9 @@ Before publishing:
 
 ```json
 {
-    "name": "@username/package-name",
-    "publishConfig": {
-        "access": "public"
-    },
+  "name": "@username/package-name",
+  "publishConfig": {
+    "access": "public"
+  }
 }
 ```
