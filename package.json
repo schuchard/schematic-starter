@@ -8,7 +8,7 @@
     "clean": "git checkout HEAD -- sandbox && git clean -f -d sandbox",
     "clean:launch": "yarn clean && yarn launch",
     "dev": "yarn build:clean:launch",
-    "launch": "cd sandbox && yarn ng g schematic-starter:schematic-starter",
+    "launch": "cd sandbox && yarn && yarn ng g schematic-starter:schematic-starter",
     "launch:schematic:noPrompts": "yarn link:sandbox && cd sandbox && yarn && yarn ng g schematic-starter:schematic-starter",
     "link:schematic": "yarn link && cd sandbox && yarn link schematic-starter",
     "publish": "yarn build",
